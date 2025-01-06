@@ -39,7 +39,7 @@ export async function sendTemplateMessage(templateName: string, language: string
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${WHATSAPP_ACCESS_TOKEN}`
     }
-    const url = `https://graph.facebook.com/v13.0/${WHATSAPP_API_PHONE_NUMBER_ID}/messages`
+    const url = `https://graph.facebook.com/v21.0/${WHATSAPP_API_PHONE_NUMBER_ID}/messages`
     const res = await fetch(url, {
         headers: headers,
         method: 'POST',

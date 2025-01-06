@@ -7,7 +7,7 @@ export async function syncMessageTemplates(supabase: SupabaseClientType) {
 
     const token = Deno.env.get('WHATSAPP_ACCESS_TOKEN')
     const fetchLimit = 10
-    let next = `https://graph.facebook.com/v17.0/${whatsappBusinessAccountId}/message_templates?limit=${fetchLimit}`;
+    let next = `https://graph.facebook.com/v21.0/${whatsappBusinessAccountId}/message_templates?limit=${fetchLimit}`;
     while (next) {
         console.log(`Fetch url: ${next}`)
         const response = await fetch(next, {
